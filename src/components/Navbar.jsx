@@ -14,8 +14,8 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
         className="flex items-center gap-2"
       >
-        <HiOutlineMail className="w-4 sm:w-5 h-4 sm:h-5" />
-        <span className="font-satoshi text-sm sm:text-base">yashlonkar99@gmail.com</span>
+        {/* <HiOutlineMail className="w-4 sm:w-5 h-4 sm:h-5" /> */}
+        <span className="font-bold font-satoshi text-sm sm:text-base">Yash Samir Lonkar.</span>
       </motion.div>
 
       {/* Mobile Menu Button */}

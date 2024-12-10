@@ -3,6 +3,10 @@ import { HiArrowRight } from 'react-icons/hi';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import ProfilePic from '../assets/profilepic.png';
 const Hero = () => {
+  const handleConnect = () => {
+    window.open('https://www.linkedin.com/in/yashlonkar55/', '_blank');
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 max-w-6xl mx-auto">
       <motion.div
@@ -82,6 +86,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={handleConnect}
           className="bg-off-black text-white px-8 py-3 rounded-full font-satoshi hover:bg-black transition-colors"
         >
           CONNECT WITH ME
