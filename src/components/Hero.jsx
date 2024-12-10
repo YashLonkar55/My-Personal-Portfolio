@@ -2,9 +2,23 @@ import { motion } from 'framer-motion';
 import { HiArrowRight } from 'react-icons/hi';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import ProfilePic from '../assets/profilepic.png';
+
 const Hero = () => {
+  const titleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2
+      }
+    }
+  };
+
+
   const handleConnect = () => {
-    window.open('https://www.linkedin.com/in/yashlonkar55/', '_blank');
+    window.open('https://www.linkedin.com/in/yashlonkar55/', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -15,55 +29,75 @@ const Hero = () => {
         transition={{ duration: 0.5 }}
         className="text-center"
       >
-        <div className="relative inline-block mb-0">
+        {/* Profile Section */}
+        <div className="flex flex-col items-center space-y-4 mb-8">
+          {/* Profile Picture */}
+          <div className="relative inline-block">
           <img
             src={ProfilePic}
-            alt="Oguz"
-            className="w-24 h-24  "
+            alt="Yash"
+            className="w-24 h-24"
           />
+          </div>
+
+          {/* Name */}
+          <h2 className="font-satoshi text-xl">
+          Hi, I'm Yash <span className="text-yellow-400">✌️</span>
+          </h2>
+
+          {/* Social Media Icons */}
           <motion.div
-            initial={{ opacity: 0, rotate: -10 }}
-            animate={{ opacity: 1, rotate: 0 }}
-            transition={{ delay: 0.3 }}
-            className="absolute -right-6 top-0"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex justify-center items-center gap-4"
           >
-            
+          <a 
+            href="https://github.com/YashLonkar55" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:transform hover:scale-110 transition-transform duration-200"
+          >
+            <FaGithub className="w-6 h-6 text-gray-700 hover:text-black transition-colors" />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/yashlonkar55/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:transform hover:scale-110 transition-transform duration-200"
+          >
+            <FaLinkedin className="w-6 h-6 text-gray-700 hover:text-[#0077b5] transition-colors" />
+          </a>
           </motion.div>
         </div>
 
-        <h2 className="font-satoshi text-xl mb-3">
-          Hi, I'm Yash <span className="text-yellow-400">✌️</span>
-        </h2>
-
-        {/* Social Media Icons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex justify-center items-center gap-4 mb-5"
-        >
-            <a href="https://github.com/YashLonkar55" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="w-6 h-6 text-gray-700 hover:text-black transition-colors" />
-            </a>
-            <a href="https://www.linkedin.com/in/yashlonkar55/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="w-6 h-6 text-gray-700 hover:text-[#0077b5] transition-colors" />
-            </a>
-            {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="w-6 h-6 text-gray-700 hover:text-[#1DA1F2] transition-colors" />
-            </a> */}
-
-        </motion.div>
-
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="font-clash-display text-6xl md:text-7xl font-bold leading-tight mb-8"
+          variants={titleVariants}
+          initial="hidden"
+          animate="visible"
+          className="font-clash-display text-6xl md:text-7xl font-bold leading-tight mb-8 relative"
         >
-          Full Stack Developer
+          <motion.div
+          className="relative inline-block"
+          whileHover={{ scale: 1.02 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          >
+          <span className="text-[#1a1a1a]">
+            Full Stack Developer
+          </span>
+          </motion.div>
           <br />
-          Design. Code. Innovate.
+          <motion.div
+          className="relative inline-block"
+          whileHover={{ scale: 1.02 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          >
+          <span className="text-[#FF8D3F]">
+            Design. Code. Innovate.
+          </span>
+          </motion.div>
         </motion.h1>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -84,10 +118,22 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={handleConnect}
-          className="bg-off-black text-white px-8 py-3 rounded-full font-satoshi hover:bg-black transition-colors"
+            whileHover={{ 
+            scale: 1.05,
+            boxShadow: [
+              "0 0 0 0 rgba(0, 119, 181, 0)",
+              "0 0 0 3px rgba(0, 119, 181, 0.4)",
+              "0 0 0 6px rgba(0, 119, 181, 0.1)"
+            ],
+            transition: {
+              boxShadow: {
+              duration: 0.2
+              }
+            }
+            }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleConnect}
+            className="relative bg-off-black text-white px-8 py-3 rounded-full font-satoshi hover:bg-black transition-all duration-300 border-2 border-transparent hover:border-[#0077b5] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-[#0077b5] before:to-[#F0EBF9] before:opacity-0 hover:before:opacity-10 before:transition-opacity"
         >
           CONNECT WITH ME
         </motion.button>
