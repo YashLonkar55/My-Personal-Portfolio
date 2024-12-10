@@ -7,15 +7,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full flex justify-between items-center px-4 sm:px-8 py-4 sm:py-6 fixed top-0 z-50 bg-white">
+    <nav className="w-full flex justify-between items-center px-4 sm:px-8 py-4 sm:py-6 fixed top-0 z-50 backdrop-blur-sm bg-white/70 border-b border-gray-200/20 shadow-sm">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="flex items-center gap-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex items-center gap-2"
       >
-        {/* <HiOutlineMail className="w-4 sm:w-5 h-4 sm:h-5" /> */}
-        <span className="font-bold font-satoshi text-sm sm:text-base">Yash Samir Lonkar.</span>
+      <span className="font-bold font-satoshi text-sm sm:text-base">Yash Samir Lonkar.</span>
+
       </motion.div>
 
       {/* Mobile Menu Button */}
@@ -67,13 +67,13 @@ const Navbar = () => {
           height: isOpen ? 'auto' : 0,
         }}
         transition={{ duration: 0.3 }}
-        className="lg:hidden fixed top-[60px] left-0 w-full bg-white shadow-lg"
-      >
+        className="lg:hidden fixed top-[60px] left-0 w-full backdrop-blur-md bg-white/80 shadow-lg border-b border-gray-200/20"
+        >
         <ul className="flex flex-col font-satoshi py-4">
           <li>
-            <a
-                href="#featured-projects"
-                className="cursor-pointer hover:text-gray-600 transition-colors px-8 py-3 block"
+          <a
+            href="#featured-projects"
+            className="cursor-pointer hover:text-gray-600 hover:bg-black/5 transition-colors px-8 py-3 block"
               onClick={() => setIsOpen(false)}
             >
               Works
@@ -83,7 +83,7 @@ const Navbar = () => {
             <a
               href="https://drive.google.com/file/d/17cIO0gloiDQELArvSDneacKKdRU6Wgm4/view?usp=sharing"
               target="_blank"
-              className="cursor-pointer hover:text-gray-600 transition-colors px-8 py-3"
+                className="cursor-pointer hover:text-gray-600 hover:bg-black/5 transition-colors px-8 py-3 block"
               onClick={() => setIsOpen(false)}
             >
               Resume
@@ -92,7 +92,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="cursor-pointer hover:text-gray-600 transition-colors px-8 py-3"
+                className="cursor-pointer hover:text-gray-600 hover:bg-black/5 transition-colors px-8 py-3 block"
               onClick={() => setIsOpen(false)}
             >
               Contact

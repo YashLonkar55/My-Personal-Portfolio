@@ -24,21 +24,27 @@ const Hero = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 max-w-6xl mx-auto">
       <motion.div
+
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center"
+        className="text-center relative z-10"
       >
         {/* Profile Section */}
         <div className="flex flex-col items-center space-y-4 mb-8">
           {/* Profile Picture */}
-          <div className="relative inline-block">
-          <img
-            src={ProfilePic}
-            alt="Yash"
-            className="w-24 h-24"
-          />
-          </div>
+            <div className="relative inline-block">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img
+              src={ProfilePic}
+              alt="Yash"
+              className="w-24 h-24"
+              />
+            </motion.div>
+            </div>
 
           {/* Name */}
           <h2 className="font-satoshi text-xl">
@@ -75,14 +81,14 @@ const Hero = () => {
           variants={titleVariants}
           initial="hidden"
           animate="visible"
-          className="font-clash-display text-6xl md:text-7xl font-bold leading-tight mb-8 relative"
+          className="font-clash-display text-5xl md:text-7xl font-bold leading-tight mb-8 relative drop-shadow-lg"
         >
           <motion.div
           className="relative inline-block"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
           >
-          <span className="text-[#1a1a1a]">
+          <span className="text-[#1a1a1a] bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 drop-shadow-sm">
             Full Stack Developer
           </span>
           </motion.div>
@@ -92,7 +98,7 @@ const Hero = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
           >
-          <span className="text-[#FF8D3F]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF8D3F] to-[#FF5F3F] drop-shadow-sm">
             Design. Code. Innovate.
           </span>
           </motion.div>
@@ -103,14 +109,14 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="max-w-2xl mx-auto mb-12"
+          className="max-w-2xl mx-auto mb-12 backdrop-blur-md bg-white/40 rounded-xl p-6 "
         >
-          <p className="font-satoshi text-gray-600">
-          An aspiring Salesforce Developer with a strong foundation in Full Stack Dev, 
-            <br />
-            I specialize in React.js, Express, MongoDB, SQL, and Java,
-            <br />
-            having hands-on experience in building dynamic, scalable web applications. 
+          <p className="font-satoshi text-gray-700 drop-shadow-sm">
+          An aspiring Salesforce Developer with a strong foundation in Full Stack Dev,
+          <br />
+          I specialize in React.js, Express, MongoDB, SQL, and Java,
+          <br />
+          having hands-on experience in building dynamic, scalable web applications.
           </p>
         </motion.div>
 
@@ -139,6 +145,7 @@ const Hero = () => {
         </motion.button>
       </motion.div>
     </div>
+    
   );
 };
 

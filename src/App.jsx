@@ -1,3 +1,4 @@
+import Layout from './components/Layout';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -8,15 +9,15 @@ import Skills from './components/Skill';
 
 function App() {
   return (
-    <div className="bg-white text-off-black">
+    <Layout>
       <Navbar />
       <Hero />
-      <Skills/>
+      <Skills />
       <Projects />
       <Experience />
       <Contact />
       <Footer />
-    </div>
+    </Layout>
   );
 }
 
