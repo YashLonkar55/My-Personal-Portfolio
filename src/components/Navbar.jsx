@@ -37,14 +37,26 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
         className="hidden lg:flex gap-8 font-satoshi"
       >
-        {['Works', 'Resume', 'Services', 'Contact'].map((item) => (
-          <li
-            key={item}
+        <li>
+            <a href="#featured-projects" className="cursor-pointer hover:text-gray-600 transition-colors">
+            Projects
+            </a>
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/17cIO0gloiDQELArvSDneacKKdRU6Wgm4/view?usp=sharing"
+            target="_blank" // Resolved the Issue of resume opening in same spage
+            
             className="cursor-pointer hover:text-gray-600 transition-colors"
           >
-            {item}
-          </li>
-        ))}
+            Resume
+          </a>
+        </li>
+        <li>
+          <a href="#contact" className="cursor-pointer hover:text-gray-600 transition-colors">
+            Contact
+          </a>
+        </li>
       </motion.ul>
 
       {/* Mobile Menu */}
@@ -58,15 +70,34 @@ const Navbar = () => {
         className="lg:hidden fixed top-[60px] left-0 w-full bg-white shadow-lg"
       >
         <ul className="flex flex-col font-satoshi py-4">
-          {['Works', 'Resume', 'Services', 'Contact'].map((item) => (
-            <li
-              key={item}
+          <li>
+            <a
+                href="#featured-projects"
+                className="cursor-pointer hover:text-gray-600 transition-colors px-8 py-3 block"
+              onClick={() => setIsOpen(false)}
+            >
+              Works
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/17cIO0gloiDQELArvSDneacKKdRU6Wgm4/view?usp=sharing"
+              target="_blank"
               className="cursor-pointer hover:text-gray-600 transition-colors px-8 py-3"
               onClick={() => setIsOpen(false)}
             >
-              {item}
-            </li>
-          ))}
+              Resume
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              className="cursor-pointer hover:text-gray-600 transition-colors px-8 py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       </motion.div>
     </nav>

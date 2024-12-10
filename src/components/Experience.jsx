@@ -2,23 +2,16 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    company: "Google",
-    role: "Senior Product Designer",
-    period: "2020 - Present",
-    description: "Led the design system team for Google Cloud Platform"
+    company: "ScaleFull Technologies LLP, Pune",
+    role: "Full Stack Developer Intern",
+    period: "Jan 24 - Feb 24",
+    description: "Coding, testing, and debugging, collaborated with team members on project requirements, and contributed to the deployment of responsive web applications using modern technologies."
   },
   {
-    company: "Apple",
-    role: "UI/UX Designer",
-    period: "2018 - 2020",
-    description: "Designed user interfaces for iOS applications"
+    company: " PixaFlip Technlogies, Pune",
+    role: "Freelance Backend Developer",
+    description: "My role involved designing, building, and deploying RESTful APIs to support various functionalities."
   },
-  {
-    company: "Microsoft",
-    role: "Visual Designer",
-    period: "2016 - 2018",
-    description: "Created visual assets for Microsoft Office suite"
-  }
 ];
 
 const Experience = () => {

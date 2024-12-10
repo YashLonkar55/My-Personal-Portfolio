@@ -38,15 +38,15 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center items-center gap-4 mb-5"
         >
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/YashLonkar55" target="_blank" rel="noopener noreferrer">
             <FaGithub className="w-6 h-6 text-gray-700 hover:text-black transition-colors" />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/yashlonkar55/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="w-6 h-6 text-gray-700 hover:text-[#0077b5] transition-colors" />
             </a>
-            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
             <FaTwitter className="w-6 h-6 text-gray-700 hover:text-[#1DA1F2] transition-colors" />
-            </a>
+            </a> */}
 
         </motion.div>
 
@@ -56,11 +56,9 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="font-clash-display text-6xl md:text-7xl font-bold leading-tight mb-8"
         >
-          Building digital
+          Full Stack Developer
           <br />
-          products, brands, and
-          <br />
-          experience.
+          Design. Code. Innovate.
         </motion.h1>
 
         <motion.div
@@ -70,11 +68,11 @@ const Hero = () => {
           className="max-w-2xl mx-auto mb-12"
         >
           <p className="font-satoshi text-gray-600">
-            a Product Designer and Visual Developer in SF.
+          An aspiring Salesforce Developer with a strong foundation in Full Stack Dev, 
             <br />
-            I specialize in UI/UX Design, Responsive Web Design,
+            I specialize in React.js, Express, MongoDB, SQL, and Java,
             <br />
-            and Visual Development.
+            having hands-on experience in building dynamic, scalable web applications. 
           </p>
         </motion.div>
 
