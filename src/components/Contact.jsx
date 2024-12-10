@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const handleGetInTouch = () => {
+    window.open('https://www.linkedin.com/in/yashlonkar55/', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto" id="contact">
       <motion.div
@@ -19,7 +23,8 @@ const Contact = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-off-black text-white px-8 py-3 rounded-full font-satoshi hover:bg-black transition-colors"
+            className="bg-off-black text-white px-8 py-3 rounded-full font-satoshi hover:bg-black transition-colors"
+            onClick={handleGetInTouch}
         >
           Get in Touch
         </motion.button>
